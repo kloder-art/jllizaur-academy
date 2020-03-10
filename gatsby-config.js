@@ -1,7 +1,6 @@
 module.exports = {
-  pathPrefix: '/jllizaur-academy',
   siteMetadata: {
-    title: 'Javier López Lizaur Academia',
+    title: 'Academia Javier López Lizaur',
     description: 'Javier López Lizaur Academy Landing Page',
     author: 'Javier López Úbeda <jlopezcur@gmail.com>',
     siteUrl: 'https://academia.jllizaur.art',
@@ -32,28 +31,28 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Javier López Lizaur Academia',
-        short_name: 'J.L.Lizaur Academia',
+        name: 'Academia Javier López Lizaur',
+        short_name: 'Academia J.L.Lizaur',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#FFFFFF',
+        theme_color: '#222',
         display: 'standalone',
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
-    // {
-    //   resolve: 'gatsby-plugin-google-analytics',
-    //   options: {
-    //     trackingId: 'UA-47318809-3',
-    //     head: false,
-    //     anonymize: true,
-    //     respectDNT: true,
-    //     sampleRate: 5,
-    //     siteSpeedSampleRate: 10,
-    //     cookieDomain: 'jllizaur.art',
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-47318809-4',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: 'jllizaur.art',
+      },
+    },
   ],
 };

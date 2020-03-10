@@ -38,7 +38,7 @@ const StyledLeftSide = styled.div`
 const LeftSide = () => (
   <StyledLeftSide>
     <div>
-      <h3>Academia</h3>
+      <h3>Academia de arte</h3>
       <h1>
         <Link to={'/'}>Javier López Lizaur</Link>
       </h1>
