@@ -1,56 +1,25 @@
 import React from 'react';
-import { FaPhone, FaEnvelopeOpenText } from 'react-icons/fa';
-import styled from 'styled-components';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import LinksList from '../components/LinksList';
 import OpenHours from '../components/home/OpenHours';
+import Cite from '../components/home/Cite';
 
-const StyledContact = styled.ul`
-  margin: 0 0 4rem;
-  list-style: none;
-  li {
-    a {
-      display: flex;
-      align-items: center;
-    }
-  }
-`;
+import subjects from '../../data/static/subjects';
+import info from '../../data/static/info';
 
 const IndexPage = () => (
   <Layout>
     <SEO title={'Inicio'} />
-    <h2>Pintura, Escultura, Dibujo Técnico, ...</h2>
-    <blockquote style={{ marginBottom: '2rem' }}>
-      «La finalidad del arte es dar cuerpo a la esencia secreta de las cosas, no
-      el copiar su apariencia»
-      <br />{' '}
-      <small>
-        <i>Aristóteles (384 a. C. - 322 a. C.)</i>
-      </small>
-    </blockquote>
+    <h2>{subjects.join(', ')}, ...</h2>
+    <Cite />
     <h2>Horario:</h2>
     <OpenHours />
     <h2>Dirección:</h2>
-    <p>
-      <a href={'#'} target={'_blank'} rel={'noopener noreferrer'}>
-        Calle Altamira, 54, Bajo Derecha. <br />
-        04005 Almería.
-      </a>
-    </p>
+    <LinksList items={[info.address]} />
     <h2>Contacto: </h2>
-    <StyledContact>
-      <li>
-        <a href={'mailto:javierlopezlizaur15@gmail.com'}>
-          <FaEnvelopeOpenText /> &nbsp; javierlopezlizaur15@gmail.com
-        </a>
-      </li>
-      <li>
-        <a href={'tel:+34670884415'}>
-          <FaPhone /> &nbsp; +34 670 88 44 15
-        </a>
-      </li>
-    </StyledContact>
+    <LinksList items={[info.email, info.phone]} />
   </Layout>
 );
 

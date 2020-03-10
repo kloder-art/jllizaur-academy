@@ -13,11 +13,11 @@ const StyledOpenHours = styled.div`
 
 const StyledDay = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 5rem 1fr 1fr;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   ${({ current }) => current && 'font-weight: bold;'}
   span:nth-child(2) {
-    text-align: center;
+    text-align: right;
   }
   span:nth-child(3) {
     text-align: right;

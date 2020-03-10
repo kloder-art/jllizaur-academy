@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import externalLinks from '../../../data/static/external-links';
+import social from '../../data/static/social';
 
 const StyledExternalLinks = styled.ul`
   margin: 0;
@@ -22,7 +22,7 @@ const StyledExternalLinks = styled.ul`
 
 const ExternalLinks = () => (
   <StyledExternalLinks>
-    {externalLinks.map((link, idx) => (
+    {social.map((link, idx) => (
       <li key={idx}>
         <a
           href={link.url}
