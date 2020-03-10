@@ -25,12 +25,12 @@ export default [
   },
   {
     icon: <FaPhone />,
-    label: 'Phone',
+    label: 'Teléfono',
     url: 'tel:+34670884415',
   },
   {
     icon: <FaMapMarkerAlt />,
-    label: 'Map',
+    label: 'Ubicación',
     url: '#',
   },
 ];
