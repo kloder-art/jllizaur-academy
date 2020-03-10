@@ -4,7 +4,7 @@ import { FaMapMarkerAlt, FaPhone, FaEnvelopeOpenText } from 'react-icons/fa';
 export default {
   address: {
     icon: <FaMapMarkerAlt />,
-    url: 'https://goo.gl/maps/QcK4wKJh7V9kW6cZ7',
+    url: 'https://goo.gl/maps/4hAaLR1irrCzRGCCA',
     content: (
       <>
         Calle Altamira, 54, Bajo Derecha. <br />
