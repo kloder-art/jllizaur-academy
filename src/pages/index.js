@@ -20,6 +20,7 @@ const StyledContact = styled.ul`
 const IndexPage = () => (
   <Layout>
     <SEO title={'Inicio'} />
+    <h2>Pintura, Escultura, Dibujo Técnico, ...</h2>
     <blockquote style={{ marginBottom: '2rem' }}>
       «La finalidad del arte es dar cuerpo a la esencia secreta de las cosas, no
       el copiar su apariencia»
