@@ -27,36 +27,28 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-16ed9b94e52f26097b45.js"
+    "url": "webpack-runtime-dbafb50d05c7218aaf9b.js"
   },
   {
-    "url": "commons-84ddf462b0034753412b.js"
+    "url": "commons-c1c76d0a0b1bb5c589aa.js"
   },
   {
-    "url": "app-8c157adb82ba7d61117e.js"
+    "url": "app-364f89f4aa9b89e884a1.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-2fb560e943ea9fad2129.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "fd8412e08d7fb03049bd6e86516741d1"
+    "revision": "247d44e0de1cbc60d4e8256b97006441"
   },
   {
     "url": "google-fonts/s/permanentmarker/v9/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Cfw.woff2",
     "revision": "1b66ccb164151a6cf698667c8b570cc6"
   },
   {
-    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "c355c8040c47a63bfb3360e4b7cb6553"
-  },
-  {
-    "url": "page-data/app-data.json",
-    "revision": "5dcbd717a9950b9d7e65b521b312ce5f"
-  },
-  {
     "url": "manifest.webmanifest",
-    "revision": "86f283878b28850d484230e3ab99881c"
+    "revision": "fc424b747414e20cb46ac1179bc0373e"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -144,12 +136,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/jllizaur-academy`), ``)
+  pathname = pathname.replace(new RegExp(`^`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jllizaur-academy/app-8c157adb82ba7d61117e.js`))) {
+  if (!resources || !(await caches.match(`/app-364f89f4aa9b89e884a1.js`))) {
     return await fetch(event.request)
   }
 
@@ -162,7 +154,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/jllizaur-academy/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
