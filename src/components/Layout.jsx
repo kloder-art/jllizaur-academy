@@ -26,9 +26,18 @@ const LeftSide = styled.div`
   box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 10px;
   color: white;
   text-shadow: 0 0 5px black;
+  h3 {
+    font-size: 2rem;
+  }
+  h1 {
+    font-size: 4rem;
+  }
   @media (max-width: 1100px) {
     & {
       padding: 2rem;
+    }
+    h1 {
+      font-size: 3rem;
     }
   }
 `;
