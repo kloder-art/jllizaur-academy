@@ -15,6 +15,7 @@ const StyledDay = styled.div`
   display: grid;
   grid-template-columns: 5rem 1fr 1fr;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  justify-items: start;
   ${({ current }) => current && 'font-weight: bold;'}
   span:nth-child(2) {
     text-align: right;
