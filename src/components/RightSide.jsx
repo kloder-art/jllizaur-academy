@@ -7,10 +7,15 @@ const StyledRightSide = styled.div`
   grid-template-rows: 1fr auto;
 
   padding: 3rem;
+  overflow-y: scroll;
   @media (max-width: 1100px) {
     & {
       padding: 1rem;
+      overflow-y: auto;
     }
+  }
+  footer {
+    margin-bottom: 1rem;
   }
 `;
 

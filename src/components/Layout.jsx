@@ -13,8 +13,10 @@ const StyledLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
+  height: 100vh;
   @media (max-width: 1100px) {
     & {
+      height: auto;
       grid-template-columns: 1fr;
       grid-template-rows: auto 1fr;
     }
