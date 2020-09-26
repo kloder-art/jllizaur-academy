@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Academia Javier López Lizaur',
-    description: 'Javier López Lizaur Academy Landing Page',
+    title: 'Academia de arte Javier López Lizaur',
+    description: 'Academia de arte Javier López Lizaur',
     author: 'Javier López Úbeda <jlopezcur@gmail.com>',
     siteUrl: 'https://academia.jllizaur.art',
   },
